@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,6 +16,16 @@
   }
 }
 
+.custom_red_color {
+  background: linear-gradient(#ff5656, rgb(245, 23, 23)) !important;
+}
+.custom_green_color {
+  background: linear-gradient(#22c25d, rgb(4, 179, 4)) !important;
+}
+.custom_orange_color {
+  background: linear-gradient(orange, #f97316) !important;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,4 +34,13 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+  font-family: "Poppins", sans-serif;
+}
+.rotator {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.rotator:hover {
+  transform: rotate(-90deg) !important;
 }
