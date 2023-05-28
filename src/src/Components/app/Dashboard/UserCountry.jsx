@@ -59,7 +59,7 @@ const UserCountry = () => {
      <>
        <ul>
          {data.map((items, index) => (
-           <li>
+           <li key={index}>
              <Brightness1Icon sx={{ color: COLORS[index] }} />{" "}
              <span className="text-light">
                {items.name}: {items.value}%

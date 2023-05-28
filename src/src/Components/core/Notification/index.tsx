@@ -23,7 +23,7 @@ import { toast, TypeOptions } from "react-toastify";
 import NotificationsIcon from '@mui/icons-material/Notifications';
 const types = ["success", "info", "warning", "error"];
 
-export default function index() {
+export default function Index() {
   const {
     notifications,
     clear,
@@ -115,6 +115,7 @@ export default function index() {
                 ).map((notification) => {
                   return (
                     <Alert
+                    key={notification.id}
                       severity={(notification.type as AlertColor) || "info"}
                       action={
                         notification.read ? (
@@ -131,7 +132,7 @@ export default function index() {
                         )
                       }
                     >
-                      {notification.content}
+                      {/* {notification?.content} */}
                     </Alert>
                   );
                 })}

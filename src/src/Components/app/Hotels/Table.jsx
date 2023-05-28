@@ -37,7 +37,7 @@ console.log({hotels})
       </thead>
       <tbody>
         {hotels?.map((items, index) =>
-          <tr>
+          <tr key={index}>
             <th className='text-center border-r  border-l' scope="row"><img src={items?.listed[0]?.images[0]} alt="" className='w-16' /></th>
             <td className='text-center border-r border-l' >{items?.listed[0]?.hotelId}</td>
             <td className='text-center border-r' >{items?.listed[0]?.NameOfProperty}</td>
